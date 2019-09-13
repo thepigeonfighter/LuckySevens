@@ -79,28 +79,56 @@
         .container-fluid {
             max-width: 600px;
         }
-        header h1{
+
+        header h1 {
             font-size: 4.25em;
         }
-        .description{
+
+        .description {
             position: fixed;
-            top:30%;
-            left :10px;
+            top: 30%;
+            left: 10px;
             width: 200px;
-            padding: 3px;
+            padding: 10px;
             text-align: center;
-            word-wrap:break-word;
-            background-color:rgba(109, 115, 133, 0.116);
+            word-wrap: break-word;
+            background-color: rgba(109, 115, 133, 0.116);
             border-radius: 5px;
         }
-        @media only screen and (max-width: 700px)
-        {
-            .description{
+
+        button {
+            width: 125px;
+            margin-right: 15px;
+            margin-left: 15px;
+        }
+
+        #description-title h5 {
+            display: block;
+            float: left;
+            font-size:1.25em;
+        }
+
+        #description-title button {
+            display: block;
+            float: right;
+        }
+
+        @media only screen and (max-width: 1000px) {
+            .description {
                 position: relative;
-                width: 60%;
+                width: 80%;
                 margin: auto;
                 margin-bottom: 15px;
 
+            }
+
+            .row img,
+            .container {
+                margin-bottom: 20px;
+            }
+            #close-btn
+            {
+                width: 10%;
             }
         }
     </style>
@@ -113,10 +141,13 @@
         </div>
     </header>
     <div class="description">
-        <h5>
+        <div id="description-title">
+            <h5>
             Description
-            <button class="btn btn-danger btn-sm" style="margin-left: 30px;" onclick="closeDescription();">X</button>
-        </h5>
+            </h5>
+            <button id="close-btn"  class=" btn btn-danger btn-sm" style="width: 20%" onclick="closeDescription();">X</button>
+        </div>
+        <div style="clear:both"></div>
         <p>
             Choose a starting bet and click play. Every time you roll a '7' you will
             be rewarded with $4. If you don't roll a seven you will be penalized $1.
@@ -124,7 +155,7 @@
             by adjusting the slider.
         </p>
     </div>
-    <div class="container" id="imageContainer" style="width:50%;">
+    <div class="container text-center" id="imageContainer">
         <div class="row">
             <div class="col text-center">
                 <h3 class="text-success" id="currentMoney">
@@ -133,20 +164,16 @@
             </div>
         </div>
         <div class="row">
+            <div class='col-sm'>
+                <img display=block src="images/Zero.png" alt="imageOfDice" id="die1">
+            </div>
+            <div class='col-sm text-center'>
+                <img display=block src="images/Zero.png" alt="imageOfDice" id="die2">
+            </div>
 
-            <div class='col-sm text-center'>
-                <figure>
-                    <img display=block src="images/Zero.png" alt="imageOfDice" id="die1" class="img-responsive">
-                </figure>
-            </div>
-            <div class='col-sm text-center'>
-                <figure>
-                    <img display=block src="images/Zero.png" alt="imageOfDice" id="die2" class="img-responsive">
-                </figure>
-            </div>
         </div>
     </div>
-    <div class="container" style="width:50%">
+    <div class="container">
         <form action="" onsubmit="return validateItems();" onreset="resetForm()">
             <div class="form-group">
                 <h2>
@@ -169,7 +196,7 @@
 
     </div>
 
-    <div class="accordion container" id='resultsAccordion' style="width: 50%">
+    <div class="accordion container" id='resultsAccordion'>
         <div class="card">
             <div class="card-header" id="resultsHeader">
                 <h3 class="mb-0 text-center">
