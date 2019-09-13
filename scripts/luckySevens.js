@@ -120,19 +120,19 @@ function GetDiceRoll() {
 function GetImageLocation(num) {
     switch (num) {
         case 0:
-            return "images/zero.png";
+            return "images/Zero.png";
         case 1:
-            return "images/one.png";
+            return "images/One.png";
         case 2:
-            return "images/two.png";
+            return "images/Two.png";
         case 3:
-            return "images/three.png";
+            return "images/Three.png";
         case 4:
-            return "images/four.png";
+            return "images/Four.png";
         case 5:
-            return "images/five.png";
+            return "images/Five.png";
         case 6:
-            return "images/six.png";
+            return "images/Six.png";
 
         default:
             console.warn("invalid number was rolled by dice");
