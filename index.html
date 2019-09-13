@@ -93,6 +93,13 @@
             background-color:rgba(109, 115, 133, 0.116);
             border-radius: 5px;
         }
+        @media only screen and (max-width: 700px)
+        {
+            .description{
+                position: relative;
+                margin:auto;
+            }
+        }
     </style>
 </head>
 
@@ -103,7 +110,7 @@
         </div>
     </header>
 
-    <div class="container-fluid" id="imageContainer" style="width:50%;">
+    <div class="container" id="imageContainer" style="width:50%;">
         <div class="row">
             <div class="col text-center">
                 <h3 class="text-success" id="currentMoney">
@@ -113,14 +120,14 @@
         </div>
         <div class="row">
 
-            <div class='col-6 text-center'>
+            <div class='col-sm text-center'>
                 <figure>
-                    <img display=block src="images/Zero.png" alt="imageOfDice" id="die1" class="img-fluid">
+                    <img display=block src="images/Zero.png" alt="imageOfDice" id="die1" class="img-responsive">
                 </figure>
             </div>
-            <div class='col-6'>
+            <div class='col-sm text-center'>
                 <figure>
-                    <img display=block src="images/Zero.png" alt="imageOfDice" id="die2" class="img-fluid">
+                    <img display=block src="images/Zero.png" alt="imageOfDice" id="die2" class="img-responsive">
                 </figure>
             </div>
         </div>
