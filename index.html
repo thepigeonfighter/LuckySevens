@@ -97,7 +97,10 @@
         {
             .description{
                 position: relative;
-                margin:auto;
+                width: 60%;
+                margin: auto;
+                margin-bottom: 15px;
+
             }
         }
     </style>
@@ -109,7 +112,18 @@
         <img src="images/lucky.svg" alt="four leaf clover" style="height: 100px">
         </div>
     </header>
-
+    <div class="description">
+        <h5>
+            Description
+            <button class="btn btn-danger btn-sm" style="margin-left: 30px;" onclick="closeDescription();">X</button>
+        </h5>
+        <p>
+            Choose a starting bet and click play. Every time you roll a '7' you will
+            be rewarded with $4. If you don't roll a seven you will be penalized $1.
+            The game is over when you are out of money. You can adjust the speed of game
+            by adjusting the slider.
+        </p>
+    </div>
     <div class="container" id="imageContainer" style="width:50%;">
         <div class="row">
             <div class="col text-center">
@@ -217,18 +231,7 @@
             </div>
         </div>
     </div>
-    <div class="description">
-        <h5>
-            Description 
-            <button class="btn btn-danger btn-sm" style="margin-left: 30px;" onclick="closeDescription();">X</button>
-        </h5>
-        <p>
-            Choose a starting bet and click play. Every time you roll a '7' you will
-            be rewarded with $4. If you don't roll a seven you will be penalized $1.
-            The game is over when you are out of money. You can adjust the speed of game 
-            by adjusting the slider.
-        </p>
-    </div>
+
 
 
     <!-- Optional JavaScript -->
